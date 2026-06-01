@@ -184,7 +184,7 @@ Then open a PR with:
 
 ## Questions?
 
-Open an issue or reach out on X: [@affaanmustafa](https://x.com/affaanmustafa)
+Open an [issue](https://github.com/adamwolfe2/coding-os/issues) on the repo.
 
 ---
 

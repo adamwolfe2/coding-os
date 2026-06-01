@@ -23,10 +23,11 @@ mkdir -p ~/.claude
 cp ~/coding-os/hooks/hooks.json ~/.claude/settings.json
 # If you already have ~/.claude/settings.json, manually merge the "hooks" block from hooks/hooks.json
 
-# Verify
-ls -la ~/.claude/{agents,commands,skills,rules}    # should show 4 symlinks
-node ~/coding-os/scripts/hooks/session-start.js < /dev/null  # smoke-test (should exit cleanly)
+# Verify everything is wired correctly
+~/coding-os/scripts/verify.sh
 ```
+
+The verify script checks symlinks, hooks installation, Node version, and optional CLI auth (gh, vercel, codex, coderabbit).
 
 Restart Claude Code and the agents/commands/skills/hooks will be picked up automatically.
 
