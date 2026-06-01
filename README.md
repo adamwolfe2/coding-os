@@ -7,16 +7,16 @@ Battle-tested agents, skills, slash commands, rules, and hooks for [Claude Code]
 ## Quick install
 
 ```bash
-git clone https://github.com/<your-org>/everything-claude-code-public.git ~/everything-claude-code
+git clone https://github.com/adamwolfe2/coding-os.git ~/coding-os
 
 # Symlink the four user-level surfaces into ~/.claude/
-ln -sfn ~/everything-claude-code/agents   ~/.claude/agents
-ln -sfn ~/everything-claude-code/commands ~/.claude/commands
-ln -sfn ~/everything-claude-code/skills   ~/.claude/skills
-ln -sfn ~/everything-claude-code/rules    ~/.claude/rules
+ln -sfn ~/coding-os/agents   ~/.claude/agents
+ln -sfn ~/coding-os/commands ~/.claude/commands
+ln -sfn ~/coding-os/skills   ~/.claude/skills
+ln -sfn ~/coding-os/rules    ~/.claude/rules
 
 # Optional: drop the autopilot CLAUDE.md template into ~/.claude/
-cp ~/everything-claude-code/CLAUDE.md.example ~/.claude/CLAUDE.md
+cp ~/coding-os/CLAUDE.md.example ~/.claude/CLAUDE.md
 ```
 
 Restart Claude Code and the agents/commands/skills will be picked up automatically.
@@ -26,7 +26,7 @@ Restart Claude Code and the agents/commands/skills will be picked up automatical
 ## Layout
 
 ```
-everything-claude-code/
+coding-os/
 |-- agents/             Specialized subagents (planner, tdd-guide, code-reviewer, ...)
 |-- commands/           Slash commands (/cap, /tdd, /plan, /qa, ...)
 |-- skills/             Workflow + domain knowledge (impeccable, safe-feature-slice, ...)
