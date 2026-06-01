@@ -24,7 +24,7 @@ For each configured MCP, attempt a lightweight ping (list resources / echo). Rep
 - Connected / Connecting / Failed (with reason)
 
 ### 3. Hook scripts
-For each script in `~/.claude/everything-claude-code/scripts/hooks/`:
+For each script in `~/coding-os/scripts/hooks/`:
 - File exists, syntactically valid (`node -c <file>`), no obvious error on dry-run
 
 ### 4. Skills/commands

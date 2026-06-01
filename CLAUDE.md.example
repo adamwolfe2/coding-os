@@ -138,7 +138,7 @@ Check these once per machine. Surface to the user if any are missing:
 | CodeRabbit | `coderabbit auth status` | `coderabbit auth login` |
 | Vercel | `vercel whoami` | `vercel login` |
 | gh | `gh auth status` | `gh auth login` |
-| rtk | `rtk gain` | reinstall |
+| rtk (optional) | `rtk gain` | `cargo install rtk-rust-token-killer` — skip if not installed |
 
 If a `/cap` step needs an unauth'd tool, **stop, surface the missing auth, do not proceed**.
 
@@ -168,7 +168,6 @@ Read the relevant file at session open. Append to memory + decisions during work
 
 ## Token Economy
 
-- Prefer `rtk` for shelled commands (already hooked)
 - Use Grep/Glob/Read over `cat`/`grep`/`find`
 - Compact at task boundaries — don't wait for auto-trigger
 - Suggest `/caveman-compress` on bloated files (CLAUDE.md, MEMORY.md, docs)
@@ -198,4 +197,6 @@ After each meaningful unit of work:
 3. If anything didn't work, append to `~/.claude/research-queue.md` for `/evolve-skills`
 4. Suggest `/compact` if context is heavy
 
+<!-- Optional: uncomment if you install RTK (Rust Token Killer)
 @RTK.md
+-->

@@ -19,7 +19,7 @@ Persistent decisions log usable from any project. Lives at `~/.claude/knowledge/
 
 Runs:
 ```bash
-node ~/everything-claude-code/scripts/lib/knowledge.js search "<query>"
+node ~/coding-os/scripts/lib/knowledge.js search "<query>"
 ```
 
 Returns ranked decisions with slug, title, project, summary. Print the top 5, then offer to open the full file.

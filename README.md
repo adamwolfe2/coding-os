@@ -17,9 +17,18 @@ ln -sfn ~/coding-os/rules    ~/.claude/rules
 
 # Optional: drop the autopilot CLAUDE.md template into ~/.claude/
 cp ~/coding-os/CLAUDE.md.example ~/.claude/CLAUDE.md
+
+# Install hooks (lifecycle scripts: session start/end, taste-lint, scope-check, compact nudges)
+mkdir -p ~/.claude
+cp ~/coding-os/hooks/hooks.json ~/.claude/settings.json
+# If you already have ~/.claude/settings.json, manually merge the "hooks" block from hooks/hooks.json
+
+# Verify
+ls -la ~/.claude/{agents,commands,skills,rules}    # should show 4 symlinks
+node ~/coding-os/scripts/hooks/session-start.js < /dev/null  # smoke-test (should exit cleanly)
 ```
 
-Restart Claude Code and the agents/commands/skills will be picked up automatically.
+Restart Claude Code and the agents/commands/skills/hooks will be picked up automatically.
 
 ---
 
@@ -38,7 +47,6 @@ coding-os/
 |-- examples/           Sample project + user CLAUDE.md
 |-- evals/              Frozen eval set used by /evolve-skills
 |-- archive/            Skills/hooks parked out of the active selector
-|-- upstreams/          Untouched snapshots of the open-source repos this kit builds on
 |-- plugins/            Plugin packaging notes
 |-- .claude-plugin/     Plugin manifest
 |-- CLAUDE.md.example   Drop into ~/.claude/CLAUDE.md to enable autopilot mode
@@ -47,6 +55,10 @@ coding-os/
 ```
 
 ---
+
+## What's in here
+
+See [CATALOG.md](./CATALOG.md) for a one-line description of every agent, skill, command, rule, and hook (75 surfaces total).
 
 ## Highlights
 

@@ -39,7 +39,7 @@ candidate ──► mutate (branch) ──► run eval set ──► gate
 
 ## Eval set
 
-Lives at `everything-claude-code/evals/tasks/`. Each task is a frozen scenario with known-good outcome. Structure:
+Lives at `coding-os/evals/tasks/`. Each task is a frozen scenario with known-good outcome. Structure:
 
 ```
 evals/

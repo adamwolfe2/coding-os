@@ -22,7 +22,7 @@ Run:
 ```bash
 node -e "
 const path = require('path');
-const t = require(path.join(process.env.HOME, 'everything-claude-code/scripts/lib/telemetry.js'));
+const t = require(path.join(process.env.HOME, 'coding-os/scripts/lib/telemetry.js'));
 const args = process.argv.slice(1);
 const sinceArg = args.find(a => a.startsWith('--since=')) || '--since=7d';
 const days = parseInt(sinceArg.replace('--since=', ''), 10) || 7;

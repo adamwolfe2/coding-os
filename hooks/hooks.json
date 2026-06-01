@@ -47,10 +47,20 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node \"${CLAUDE_PLUGIN_ROOT}/scripts/hooks/suggest-compact.js\""
+            "command": "node \"$HOME/coding-os/scripts/hooks/suggest-compact.js\""
           }
         ],
         "description": "Suggest manual compaction at logical intervals"
+      },
+      {
+        "matcher": "tool == \"Edit\" || tool == \"Write\"",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$HOME/coding-os/scripts/hooks/scope-check.js\""
+          }
+        ],
+        "description": "Warn when edits stray outside the current slice spec scope"
       }
     ],
     "PreCompact": [
@@ -59,7 +69,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node \"${CLAUDE_PLUGIN_ROOT}/scripts/hooks/pre-compact.js\""
+            "command": "node \"$HOME/coding-os/scripts/hooks/pre-compact.js\""
           }
         ],
         "description": "Save state before context compaction"
@@ -71,7 +81,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node \"${CLAUDE_PLUGIN_ROOT}/scripts/hooks/session-start.js\""
+            "command": "node \"$HOME/coding-os/scripts/hooks/session-start.js\""
           }
         ],
         "description": "Load previous context and detect package manager on new session"
@@ -129,6 +139,26 @@
           }
         ],
         "description": "Check for console.log in modified files after each response"
+      },
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$HOME/coding-os/scripts/hooks/taste-lint.js\""
+          }
+        ],
+        "description": "Flag sloppy patterns (mutation, swallowed errors, magic numbers) at session end"
+      },
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$HOME/coding-os/scripts/hooks/compact-trigger.js\""
+          }
+        ],
+        "description": "Nudge /caveman-compress when context is heavy"
       }
     ],
     "SessionEnd": [
@@ -137,7 +167,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node \"${CLAUDE_PLUGIN_ROOT}/scripts/hooks/session-end.js\""
+            "command": "node \"$HOME/coding-os/scripts/hooks/session-end.js\""
           }
         ],
         "description": "Persist session state on end"
@@ -147,7 +177,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node \"${CLAUDE_PLUGIN_ROOT}/scripts/hooks/evaluate-session.js\""
+            "command": "node \"$HOME/coding-os/scripts/hooks/evaluate-session.js\""
           }
         ],
         "description": "Evaluate session for extractable patterns"

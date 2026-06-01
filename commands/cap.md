@@ -110,7 +110,7 @@ Unless `--no-push` was passed.
 After push, confirm the ship landed:
 
 ```bash
-node ~/everything-claude-code/scripts/lib/ship-verify.js
+node ~/coding-os/scripts/lib/ship-verify.js
 ```
 
 Three-stage poll (in `lib/ship-verify.js`):
