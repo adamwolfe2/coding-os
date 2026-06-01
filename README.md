@@ -38,6 +38,7 @@ everything-claude-code/
 |-- examples/           Sample project + user CLAUDE.md
 |-- evals/              Frozen eval set used by /evolve-skills
 |-- archive/            Skills/hooks parked out of the active selector
+|-- upstreams/          Untouched snapshots of the open-source repos this kit builds on
 |-- plugins/            Plugin packaging notes
 |-- .claude-plugin/     Plugin manifest
 |-- CLAUDE.md.example   Drop into ~/.claude/CLAUDE.md to enable autopilot mode
