@@ -1,0 +1,37 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Secrets and env
+.env
+.env.*
+*.key
+*.pem
+secrets.json
+
+# Node / build noise
+node_modules/
+*.log
+tmp/
+cache/
+dist/
+build/
+
+# Personal / private
+personal/
+private/
+
+# User-level Claude Code state (should never be committed)
+.claude/projects/
+.claude/sessions/
+.claude/telemetry*
+.claude/knowledge/
+.claude/history.jsonl
+.claude/package-manager.json
+
+# Session templates (examples — not committed)
+examples/sessions/*.tmp
